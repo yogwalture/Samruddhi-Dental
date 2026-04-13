@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Button, buttonVariants } from "@/components/ui/button";
-import { Phone, Menu, ChevronDown } from "lucide-react";
+import { Phone, Menu, ChevronDown, Instagram } from "lucide-react";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import {
   DropdownMenu,
@@ -63,6 +63,17 @@ export function Navbar() {
             <motion.a 
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
+              href="https://www.instagram.com/samruddhidentalandlasercenter?igsh=ZjVpNnNybDBpbzc5" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              aria-label="Instagram" 
+              className={buttonVariants({ variant: "outline", size: "icon", className: "text-pink-600 border-pink-200 hover:bg-pink-50 hover:text-pink-700 shadow-sm" })}
+            >
+              <Instagram className="h-5 w-5" />
+            </motion.a>
+            <motion.a 
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
               href="https://wa.me/919765799994" 
               target="_blank" 
               rel="noopener noreferrer" 
@@ -80,7 +91,10 @@ export function Navbar() {
         </nav>
 
         {/* Mobile Nav */}
-        <div className="md:hidden flex items-center gap-2">
+        <div className="md:hidden flex items-center gap-1">
+          <a href="https://www.instagram.com/samruddhidentalandlasercenter?igsh=ZjVpNnNybDBpbzc5" target="_blank" rel="noopener noreferrer" className={buttonVariants({ variant: "ghost", size: "icon", className: "text-pink-600" })}>
+            <Instagram className="h-5 w-5" />
+          </a>
           <a href="https://wa.me/919765799994" target="_blank" rel="noopener noreferrer" className={buttonVariants({ variant: "ghost", size: "icon", className: "text-green-600" })}>
             <WhatsAppIcon className="h-5 w-5" />
           </a>
